@@ -58,12 +58,9 @@ export default function ResaleDetail({ request, onBack, onCustomerClick, onOrder
       case 'New Submission': return 'bg-blue-50 text-blue-700 border-blue-200';
       case 'Review in Progress': return 'bg-amber-50 text-amber-700 border-amber-200';
       case 'Awaiting Agreement': return 'bg-orange-50 text-orange-700 border-orange-200';
-      case 'Listed': 
       case 'Publicly Listed': return 'bg-emerald-50 text-emerald-700 border-emerald-200';
-      case 'Declined': 
-      case 'Rejected': return 'bg-red-50 text-red-700 border-red-200';
-      case 'Withdrawn': 
-      case 'Cancelled': return 'bg-gray-100 text-gray-600 border-gray-200';
+      case 'Declined': return 'bg-red-50 text-red-700 border-red-200';
+      case 'Withdrawn': return 'bg-gray-100 text-gray-600 border-gray-200';
       default: return 'bg-gray-100 text-gray-600 border-gray-200';
     }
   };
@@ -280,7 +277,7 @@ export default function ResaleDetail({ request, onBack, onCustomerClick, onOrder
                 </div>
               )}
 
-              {(request.status === 'Publicly Listed' || request.status === 'Listed') && (
+              {request.status === 'Publicly Listed' && (
                 <div className="w-full space-y-3">
                   <div className="bg-emerald-50 text-emerald-700 p-4 rounded-2xl border border-emerald-100/50 animate-pulse">
                     <p className="text-xs font-black uppercase tracking-widest leading-relaxed mb-1">Property Active</p>
@@ -292,7 +289,7 @@ export default function ResaleDetail({ request, onBack, onCustomerClick, onOrder
                 </div>
               )}
 
-              {(request.status === 'Declined' || request.status === 'Withdrawn' || request.status === 'Rejected' || request.status === 'Cancelled') && (
+              {(request.status === 'Declined' || request.status === 'Withdrawn') && (
                 <div className="flex flex-col items-center gap-2">
                   <Badge className="bg-gray-100 text-gray-500 border-transparent font-black px-4 py-2">
                     CLOSED APPLICATION

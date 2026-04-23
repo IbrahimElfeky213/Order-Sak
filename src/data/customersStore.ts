@@ -188,7 +188,7 @@ export const mockCustomers: Customer[] = [
         id: 'RSL-2001',
         propertyName: 'Apartment B4',
         projectName: 'Olaya Towers',
-        status: 'Review in Progress',
+        status: 'Pending',
         salePrice: 900000,
         commissionFee: 18000,
         submittedDate: '2026-04-18',

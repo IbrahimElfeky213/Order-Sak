@@ -210,7 +210,7 @@ export default function CustomerProfile({ customer, onBack, onOrderClick, onResa
                   />
                 </div>
                 <div className="text-[11px] text-gray-400 font-medium">
-                  Showing {customer[activeTab.charAt(0).toLowerCase() + activeTab.slice(1) as keyof Customer]?.length || 0} entries
+                  Showing {(Array.isArray(customer[activeTab.charAt(0).toLowerCase() + activeTab.slice(1) as keyof Customer]) ? (customer[activeTab.charAt(0).toLowerCase() + activeTab.slice(1) as keyof Customer] as unknown[]).length : 0)} entries
                 </div>
               </div>
             </header>
@@ -339,8 +339,8 @@ export default function CustomerProfile({ customer, onBack, onOrderClick, onResa
                               <td className="px-6 py-4 text-right font-bold text-emerald-600">SAR {r.salePrice.toLocaleString()}</td>
                               <td className="px-6 py-4">
                                 <Badge variant="outline" className={`text-[10px] ${
-                                  r.status === 'Publicly Listed' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : 
-                                  r.status === 'Awaiting Agreement' ? 'bg-orange-50 text-orange-700 border-orange-100' :
+                                  r.status === 'Approved' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' :
+                                  r.status === 'Pending' ? 'bg-orange-50 text-orange-700 border-orange-100' :
                                   'bg-gray-50 text-gray-600'
                                 }`}>
                                   {r.status}
