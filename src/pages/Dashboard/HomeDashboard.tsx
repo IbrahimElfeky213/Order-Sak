@@ -28,11 +28,11 @@ const revenueMockData = [
 ];
 
 const ordersStatusMockData = [
-  { name: 'Prebook', count: 45, color: '#94a3b8' },
-  { name: 'Deposit', count: 80, color: '#3b82f6' },
-  { name: 'Installment', count: 120, color: '#EAB308' },
-  { name: 'Deed', count: 35, color: '#22C55E' },
-  { name: 'Cancelled', count: 15, color: '#EF4444' },
+  { name: 'Prebook', count: 45, color: '#98A2B3' }, // gray-400
+  { name: 'Deposit', count: 80, color: '#2970FF' }, // brand-500
+  { name: 'Installment', count: 120, color: '#F79009' }, // warning-500
+  { name: 'Deed', count: 35, color: '#32D583' }, // success-500
+  { name: 'Cancelled', count: 15, color: '#F04438' }, // error-500
 ];
 
 interface HomeDashboardProps { orders: Order[]; onOrderClick: (id: string) => void; }

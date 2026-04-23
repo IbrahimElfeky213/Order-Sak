@@ -24,12 +24,35 @@ export default {
         foreground: "hsl(var(--foreground))",
         
         brand: {
-          DEFAULT: "#1E3A8A",
-          foreground: "hsl(var(--primary-foreground))",
+          25: '#FCFCFD',
+          50: '#F9FAFB',
+          100: '#F2F4F7',
+          200: '#EAECF0',
+          300: '#D0D5DD',
+          400: '#98A2B3',
+          500: '#2970FF', // Brand Primary
+          600: '#155EEF', // Brand Hover
+          700: '#004EEB', // Brand Deep
+          800: '#101828', // Dark Neutral
+          900: '#0C111D',
+          DEFAULT: '#2970FF',
+          foreground: '#FFFFFF',
         },
-        
+        gray: {
+          25: '#FCFCFD',
+          50: '#F9FAFB',
+          100: '#F2F4F7',
+          200: '#EAECF0',
+          300: '#D0D5DD',
+          400: '#98A2B3',
+          500: '#667085',
+          600: '#475467',
+          700: '#344054',
+          800: '#1D2939',
+          900: '#101828',
+        },
         primary: {
-          DEFAULT: "hsl(var(--primary))", // The yellow requested
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -56,20 +79,31 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-
-        // Semantic colors requested
         success: {
-          DEFAULT: "#22C55E",
-          foreground: "#FFFFFF",
+          50: '#ECFDF3',
+          500: '#32D583',
+          600: '#039855',
+          DEFAULT: '#32D583',
+          foreground: '#FFFFFF',
         },
         error: {
-          DEFAULT: "#EF4444",
-          foreground: "#FFFFFF",
+          50: '#FEF3F2',
+          500: '#F04438',
+          600: '#D92D20',
+          DEFAULT: '#F04438',
+          foreground: '#FFFFFF',
         },
         warning: {
-          DEFAULT: "#F59E0B",
-          foreground: "#FFFFFF",
+          50: '#FFFAEB',
+          500: '#F79009',
+          600: '#B54708',
+          DEFAULT: '#F79009',
+          foreground: '#FFFFFF',
         }
+      },
+      fontFamily: {
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

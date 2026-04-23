@@ -172,8 +172,8 @@ export default function App() {
           
           {/* Logo Section */}
           <div className="h-16 flex items-center justify-between px-4 border-b border-gray-100 overflow-hidden">
-            {!isCollapsed && <h1 className="text-xl font-black text-brand tracking-widest uppercase truncate ml-2">SAK Admin</h1>}
-            {isCollapsed && <div className="w-10 h-10 bg-brand rounded-lg flex items-center justify-center text-white font-black text-xl mx-auto flex-shrink-0">S</div>}
+            {!isCollapsed && <h1 className="text-xl font-heading font-black text-brand tracking-tight truncate ml-2">SAK ADMIN</h1>}
+            {isCollapsed && <div className="w-10 h-10 bg-brand rounded-xl flex items-center justify-center text-white font-heading font-black text-xl mx-auto flex-shrink-0">S</div>}
           </div>
 
           {/* Navigation */}
@@ -223,10 +223,10 @@ export default function App() {
         <main className="flex-1 flex flex-col h-screen overflow-hidden">
 
           {/* Topbar */}
-          <header className="h-16 flex-shrink-0 bg-white shadow-sm z-10 flex items-center justify-between px-6 border-b">
+          <header className="h-16 flex-shrink-0 bg-white shadow-xs z-10 flex items-center justify-between px-6 border-b border-gray-200">
             <div className="flex items-center gap-4">
-              <h2 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand to-primary pr-4 border-r border-gray-200">SAK</h2>
-              <h2 className="text-lg font-bold text-gray-800">{routeTitle[activeRoute] ?? activeRoute}</h2>
+              <h2 className="text-xl font-heading font-black text-brand pr-4 border-r border-gray-100 uppercase tracking-tighter">SAK</h2>
+              <h2 className="text-lg font-heading font-bold text-gray-900">{routeTitle[activeRoute] ?? activeRoute}</h2>
             </div>
             <div className="flex items-center space-x-3">
               <div className="text-right">
